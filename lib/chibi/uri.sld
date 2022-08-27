@@ -14,5 +14,13 @@
     (begin
       (define (string-concatenate ls)
         (apply string-append ls)))))
-  (import (chibi string) (chibi pathname))
+  (import (only (chibi string)
+                string-cursor>=?
+                string-cursor<=?
+                string-cursor-end
+                string-cursor-next
+                string-cursor-ref
+                string-cursor-start
+                substring-cursor))
+  (import (chibi pathname))
   (include "uri.scm"))

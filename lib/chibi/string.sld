@@ -44,8 +44,7 @@
                    (lambda args (write-char (apply proc args) out))
                    str los))))))
    (else
-    (import (scheme base) (scheme char) (srfi 14)
-            (except (srfi 1) make-list list-copy))
+    (import (scheme base) (scheme char) (srfi 14))
     (begin
       (define (string-cursor->index str i) i)
       (define (string-index->cursor str i) i)
