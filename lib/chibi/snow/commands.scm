@@ -1777,7 +1777,8 @@
       (for-each
        (lambda (lib)
          (let ((lib-name (library-name lib)))
-           (if (and (not (equal? pkg-name (take lib-name (length pkg-name))))
+           (if (and (not (equal? pkg-name (take lib-name (min (length lib-name)
+                                                              (length pkg-name)))))
                     (should-install-library? impl cfg lib))
                (let* ((lib-meta (make-path install-dir
                                            (get-library-meta-file cfg lib)))

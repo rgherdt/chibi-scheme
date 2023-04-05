@@ -18,9 +18,14 @@
                 string-cursor>=?
                 string-cursor<=?
                 string-cursor-end
+                string-cursor-forward
                 string-cursor-next
                 string-cursor-ref
                 string-cursor-start
+                string-downcase-ascii
+                string-find
+                string-find-right
+                string-suffix?
                 substring-cursor))
   (import (chibi pathname))
   (include "uri.scm"))
